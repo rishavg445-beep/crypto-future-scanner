@@ -4,3 +4,6 @@
 2026-11-20 21:32:27 instruments: 505, sample ['B-ACT_USDT', 'B-LA_USDT', 'B-THE_USDT']
 2026-11-20 21:32:27 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.783, 'l': 3.564, 'v': 62056137.2692, 'ls': 3.643, 'pc': -3.086, 'mkt': 'NATGASUSDT', 'btST': 1795190543708, 'ctRT': 1795190544532, 'skw': 8, 'mp': 3.64333274, 'efr': 0, 'bmST': 1795190545685, 'cmRT': 1795190545797}
 2026-11-20 21:36:34 coins with usable candles: 505 of 505
+2026-11-21 04:07:59 instruments: 505, sample ['B-XAU_USDT', 'B-ARX_USDT', 'B-CYS_USDT']
+2026-11-21 04:07:59 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.8, 'l': 3.564, 'v': 75437174.1672, 'ls': 3.793, 'pc': 3.099, 'mkt': 'NATGASUSDT', 'btST': 1795214272631, 'ctRT': 1795214273513, 'skw': 47, 'mp': 3.793, 'efr': 0, 'bmST': 1795214277685, 'cmRT': 1795214277814}
+2026-11-21 04:12:45 coins with usable candles: 505 of 505
