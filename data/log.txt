@@ -10,3 +10,16 @@
 2026-11-21 09:23:52 instruments: 505, sample ['B-LIT_USDT', 'B-IN_USDT', 'B-CARV_USDT']
 2026-11-21 09:23:52 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.805, 'l': 3.564, 'v': 75478958.3958, 'ls': 3.786, 'pc': 2.88, 'mkt': 'NATGASUSDT', 'btST': 1795233230757, 'ctRT': 1795233231551, 'skw': 2, 'mp': 3.786, 'efr': 0, 'bmST': 1795233231685, 'cmRT': 1795233231791}
 2026-11-21 09:28:20 coins with usable candles: 505 of 505
+2026-11-21 17:58:56 instruments: 505, sample ['B-TAC_USDT', 'B-AIO_USDT', 'B-MYX_USDT']
+2026-11-21 17:58:56 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.805, 'l': 3.58, 'v': 69234111.7584, 'ls': 3.777, 'pc': 5.268, 'mkt': 'NATGASUSDT', 'btST': 1795264131331, 'ctRT': 1795264132476, 'skw': 28, 'mp': 3.777, 'efr': 6.6e-06, 'bmST': 1795264135685, 'cmRT': 1795264135792}
+2026-11-21 18:02:53 coins with usable candles: 505 of 505
+2026-11-21 18:02:53 graded STEEM: MISS peak 3.1% dip -1.9% plan STOP
+2026-11-21 18:02:53 graded YB: MISS peak 2.9% dip -14.6% plan OPEN
+2026-11-21 18:02:53 graded SAPIEN: MISS peak 12.2% dip -6.1% plan OPEN
+2026-11-21 18:02:53 graded CTR: MISS peak 0.7% dip -3.8% plan OPEN
+2026-11-21 18:02:53 graded ANIME: MISS peak 1.0% dip -1.1% plan STOP
+2026-11-21 18:02:53 graded BARD: MISS peak 1.7% dip -3.9% plan OPEN
+2026-11-21 18:02:53 graded BANK: MISS peak 0.6% dip -0.5% plan STOP
+2026-11-21 18:02:53 graded GTC: MISS peak -0.5% dip -3.9% plan STOP
+2026-11-21 18:02:53 graded IRYS: PARTIAL peak 15.3% dip -0.5% plan OPEN
+2026-11-21 18:02:53 graded BMT: MISS peak 5.4% dip -3.0% plan STOP
