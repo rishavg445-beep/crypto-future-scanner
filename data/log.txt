@@ -86,3 +86,6 @@
 2026-11-22 20:34:27 graded PARTI: MISS peak 2.4% dip -0.8% plan OPEN
 2026-11-22 20:34:27 graded YB: MISS peak 8.7% dip -0.7% plan OPEN
 2026-11-22 20:34:27 review: learning data: 17 pumps, 1500 quiet samples; weights kept (test score old 0.70, new 0.69; need +0.03); stop/target changed to stop 5 x ATR, T1 4.0 R (total R -7.0 -> -4.0)
+2026-11-22 21:41:31 instruments: 505, sample ['B-LINEA_USDT', 'B-PAXG_USDT', 'B-ATH_USDT']
+2026-11-22 21:41:31 price sample B-NATGAS_USDT: {'fr': -5.389e-05, 'h': 3.801, 'l': 3.738, 'v': 10294026.6649, 'ls': 3.75, 'pc': -0.504, 'mkt': 'NATGASUSDT', 'btST': 1795363885469, 'ctRT': 1795363886477, 'skw': -25, 'mp': 3.74953687, 'efr': -3.863e-05, 'bmST': 1795363890685, 'cmRT': 1795363890795}
+2026-11-22 21:45:49 coins with usable candles: 505 of 505
