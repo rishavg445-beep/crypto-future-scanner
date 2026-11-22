@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """CoinDCX INR-M futures pump scanner. Runs hourly on GitHub Actions. Standard library only."""
-import json, os, sys, time, traceback, urllib.request, urllib.parse
+import json, os, random, sys, time, traceback, urllib.request, urllib.parse
 from datetime import datetime, timezone, timedelta
 
 BASE = "https://api.coindcx.com"
@@ -12,6 +12,7 @@ DEFAULT = {"version": 1,
            "weights": {"vol": 10.0, "squeeze": 25.0, "mom": 1.0, "fund": 1.0},
            "max_chg24": 20.0, "stop_atr": 3.0, "t1_r": 2.0, "t2_r": 4.0, "top_n": 10}
 LOGS = []
+MIN_POS = 8
 
 def now(): return int(time.time())
 def log(m):
@@ -113,6 +114,33 @@ def feats(c):
     return {"vr": round(vr, 3), "sq": round(sq, 3), "mom4": round(mom4, 2), "chg24": round(chg24, 2),
             "atr": round(atr, 5), "vol24": vol24}
 
+def peak_event(c, i):
+    """Pump = a 50%+ rise from a low to a high inside the 24 candles after position i. Returns (gain %, start index) or None."""
+    w = c[i + 1:i + 25]
+    if len(w) < 24: return None
+    pi = max(range(24), key=lambda k: w[k]["h"])
+    li = min(range(pi + 1), key=lambda k: w[k]["l"])
+    low = w[li]["l"]
+    if low <= 0: return None
+    return (w[pi]["h"] / low - 1) * 100, i + 1 + li
+
+def collect(c, positions, p_neg, rnd):
+    """Find real pumps (features taken just BEFORE the low) and sample quiet non-pump moments."""
+    ev, ng, skip = [], [], -1
+    for i in positions:
+        if i < skip: continue
+        r = peak_event(c, i)
+        if not r: continue
+        gain, s = r
+        if gain >= 50:
+            f = feats(c[:s])
+            if f: ev.append((c[s]["t"], round(gain, 1), f))
+            skip = i + 24
+        elif gain < 15 and rnd.random() < p_neg:
+            f = feats(c[:i + 1])
+            if f: ng.append((c[i]["t"], f))
+    return ev, ng
+
 def score(f, fund, w):
     s = min(f["vr"], 6) * w["vol"] + max(0, 1 - f["sq"]) * w["squeeze"] + min(abs(f["mom4"]), 5) * w["mom"]
     if fund is not None: s += min(abs(fund) * 1e4, 10) * w["fund"]
@@ -166,14 +194,15 @@ def effect(pos, neg, fn):
 def review(st, S):
     """Nightly self-improvement with guardrails. Returns a short text for the history."""
     notes = []
-    pos = [(m["t"], m["f"]) for m in S["movers"] if m.get("f")]
-    neg = [(o["t"], o["f"]) for o in S["outcomes"] if o["grade"] == "MISS" and o.get("f")]
-    notes.append("data: %d real movers, %d missed picks" % (len(pos), len(neg)))
-    if len(pos) >= 15 and len(neg) >= 50:
-        pos.sort(key=lambda x: x[0]); neg.sort(key=lambda x: x[0])
+    ex = sorted(S["ex"], key=lambda e: e[0])
+    pos = [e for e in ex if e[4] == 1]; neg = [e for e in ex if e[4] == 0]
+    notes.append("learning data: %d pumps, %d quiet samples" % (len(pos), len(neg)))
+    if len(pos) >= MIN_POS and len(neg) >= 40:
         cp, cn = int(len(pos) * 0.7), int(len(neg) * 0.7)
-        tp, hp, tn, hn = [x[1] for x in pos[:cp]], [x[1] for x in pos[cp:]], [x[1] for x in neg[:cn]], [x[1] for x in neg[cn:]]
-        if len(hp) >= 5 and len(hn) >= 10:
+        fd = lambda e: {"vr": e[1], "sq": e[2], "mom4": e[3]}
+        tp, hp = [fd(e) for e in pos[:cp]], [fd(e) for e in pos[cp:]]
+        tn, hn = [fd(e) for e in neg[:cn]], [fd(e) for e in neg[cn:]]
+        if len(hp) >= 3 and len(hn) >= 20:
             base = DEFAULT["weights"]; cur = st["weights"]
             fns = {"vol": lambda f: min(f["vr"], 6), "squeeze": lambda f: max(0, 1 - f["sq"]), "mom": lambda f: min(abs(f["mom4"]), 5)}
             new = dict(cur)
@@ -181,17 +210,17 @@ def review(st, S):
                 d = effect(tp, tn, fn)
                 new[k] = round(max(0.3 * base[k], min(2 * base[k], base[k] * (1 + 0.5 * d))), 2)
             a_old, a_new = auc(hp, hn, cur), auc(hp, hn, new)
-            if a_new >= a_old + 0.02:
+            if a_new >= a_old + 0.03:
                 st["weights"] = new; st["version"] += 1
-                notes.append("weights changed to %s (holdout AUC %.2f -> %.2f)" % (new, a_old, a_new))
+                notes.append("weights changed to %s (test score %.2f -> %.2f)" % (new, a_old, a_new))
             else:
-                notes.append("weights kept (holdout AUC old %.2f, new %.2f; need +0.02)" % (a_old, a_new))
+                notes.append("weights kept (test score old %.2f, new %.2f; need +0.03)" % (a_old, a_new))
         else:
-            notes.append("weights kept (holdout too small)")
+            notes.append("weights kept (test set too small)")
     else:
-        notes.append("weights kept (need 15 movers and 50 missed picks)")
+        notes.append("weights kept (need %d pumps and 40 quiet samples)" % MIN_POS)
     outs = [o for o in S["outcomes"] if o.get("path") and o.get("atr")]
-    if len(outs) >= 30:
+    if len(outs) >= 20:
         def total(m, r1):
             tot = 0.0
             for o in outs:
@@ -206,7 +235,7 @@ def review(st, S):
         else:
             notes.append("stop/target kept (total R now %.1f, best %.1f)" % (cur_t, best[1]))
     else:
-        notes.append("stop/target kept (need 30 graded picks, have %d)" % len(outs))
+        notes.append("stop/target kept (need 20 graded picks, have %d)" % len(outs))
     return "; ".join(notes)
 
 def load():
@@ -215,7 +244,9 @@ def load():
     except Exception:
         S = {}
     S.setdefault("strategy", json.loads(json.dumps(DEFAULT)))
-    for k in ("picks", "outcomes", "movers", "history"): S.setdefault(k, [])
+    for k in ("picks", "outcomes", "movers", "history", "ex"): S.setdefault(k, [])
+    S["movers"] = [m for m in S["movers"] if "gain" in m]
+    S.setdefault("backfilled", False)
     S.setdefault("last_review", "")
     return S
 
@@ -245,13 +276,37 @@ def main():
         f = feats(c)
         if f: universe.append((p, c, f))
     log("coins with usable candles: %d of %d" % (len(universe), len(pairs)))
-    # 1. real movers (up 50%+ in 24h)
-    for p, c, f in universe:
-        if f["chg24"] >= 50 and not any(m["pair"] == p and t - m["t"] < 24 * 3600 for m in S["movers"]):
-            pre = feats(c[:-24])
-            was = any(x["pair"] == p and t - x["t"] < 48 * 3600 for x in S["picks"])
-            S["movers"].append({"t": t, "pair": p, "coin": coin_of(p), "chg24": f["chg24"], "f": pre, "was_picked": was})
-            log("REAL MOVER %s +%.1f%% (we had picked it: %s)" % (coin_of(p), f["chg24"], was))
+    # 1. real pumps: backfill once (last 7 days), then check the newest finished 24h window every hour
+    S.setdefault("first_scan", t)
+    rnd = random.Random(t)
+    def add(p, ev, ng):
+        for ts, gain, f in ev:
+            if any(m["pair"] == p and abs(m["t"] - ts) < 24 * 3600 for m in S["movers"]): continue
+            tracked = ts >= S["first_scan"]
+            was = any(x["pair"] == p and ts - 24 * 3600 <= x["t"] <= ts + 3600 for x in S["picks"]) if tracked else None
+            S["movers"].append({"t": ts, "pair": p, "coin": coin_of(p), "gain": gain, "f": f, "was_picked": was})
+            S["ex"].append([ts, f["vr"], f["sq"], f["mom4"], 1])
+            log("REAL PUMP %s +%.0f%% (picked first: %s)" % (coin_of(p), gain, was))
+        for ts, f in ng:
+            S["ex"].append([ts, f["vr"], f["sq"], f["mom4"], 0])
+    just_filled = False
+    if not S["backfilled"]:
+        allneg = []
+        for p, c, f in universe:
+            ev, ng = collect(c, range(59, len(c) - 24, 2), 0.08, rnd)
+            add(p, ev, [])
+            allneg += [(p, x) for x in ng]
+        if len(allneg) > 1500: allneg = rnd.sample(allneg, 1500)
+        for p, x in allneg: S["ex"].append([x[0], x[1]["vr"], x[1]["sq"], x[1]["mom4"], 0])
+        S["backfilled"] = True; just_filled = True
+        log("backfill done: %d pumps found in the last ~7 days, %d quiet samples" % (len(S["movers"]), len(allneg)))
+    else:
+        for p, c, f in universe:
+            if len(c) >= 85:
+                ev, ng = collect(c, [len(c) - 25], 0.03, rnd)
+                add(p, ev, ng)
+    pos = [e for e in S["ex"] if e[4] == 1][-800:]; neg = [e for e in S["ex"] if e[4] == 0][-2500:]
+    S["ex"] = pos + neg
     # 2. grade old picks
     done = {o["id"] for o in S["outcomes"]}
     for pk in S["picks"]:
@@ -293,10 +348,10 @@ def main():
                                "score": round(x["score"], 1), "atr": x["f"]["atr"], "low12": x["low12"], "m": st["stop_atr"],
                                "r1": st["t1_r"], "r2": st["t2_r"], "v": st["version"]})
     S["picks"] = [k for k in S["picks"] if t - k["t"] < 5 * 24 * 3600]
-    S["movers"] = S["movers"][-300:]
+    S["movers"] = S["movers"][-400:]
     # 4. nightly review (after 23:00 IST, once a day)
     ist = datetime.now(IST); today = ist.strftime("%Y-%m-%d")
-    if ist.hour >= 23 and S["last_review"] != today:
+    if just_filled or (ist.hour >= 23 and S["last_review"] != today):
         old = st["version"]; txt = review(st, S)
         S["history"].append({"t": t, "date": today, "version": st["version"], "changed": st["version"] != old, "text": txt})
         S["last_review"] = today; log("review: " + txt)
@@ -304,11 +359,13 @@ def main():
     # 5. write files
     day = 24 * 3600
     rec = [m for m in S["movers"] if t - m["t"] < 7 * day]
+    trk = [m for m in rec if m["was_picked"] is not None]
     latest = {"updated": t, "updated_ist": ist.strftime("%d %b %Y %H:%M IST"), "coins_scanned": len(universe), "pairs_listed": len(pairs),
               "strategy": {"version": st["version"], "weights": st["weights"], "stop_atr": st["stop_atr"], "t1_r": st["t1_r"], "t2_r": st["t2_r"]},
               "picks": picks_now,
-              "movers": [{"coin": m["coin"], "chg24": m["chg24"], "t": m["t"], "was_picked": m["was_picked"]} for m in rec[::-1]],
-              "movers_7d": {"total": len(rec), "caught": sum(1 for m in rec if m["was_picked"])},
+              "movers": [{"coin": m["coin"], "gain": m["gain"], "t": m["t"], "was_picked": m["was_picked"]} for m in sorted(rec, key=lambda m: -m["t"])[:40]],
+              "movers_7d": {"total": len(rec), "tracked": len(trk), "caught": sum(1 for m in trk if m["was_picked"])},
+              "learn": {"pos": sum(1 for e in S["ex"] if e[4] == 1), "neg": sum(1 for e in S["ex"] if e[4] == 0), "need_pos": MIN_POS},
               "stats": {"all": stats(S["outcomes"]), "d7": stats(S["outcomes"], t - 7 * day), "d30": stats(S["outcomes"], t - 30 * day)},
               "report": [{k: o.get(k) for k in ("coin", "t", "grade", "peak", "dip", "end", "plan")} for o in S["outcomes"][-25:][::-1]],
               "history": S["history"][::-1][:15],
