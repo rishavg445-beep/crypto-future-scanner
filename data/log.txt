@@ -48,3 +48,13 @@
 2026-11-22 05:51:41 graded TNSR: MISS peak 2.8% dip -6.3% plan OPEN
 2026-11-22 05:51:41 graded RARE: PARTIAL peak 21.0% dip -2.6% plan OPEN
 2026-11-22 05:51:41 graded TWT: MISS peak 5.8% dip -7.5% plan STOP
+2026-11-22 13:26:08 instruments: 505, sample ['B-DEEP_USDT', 'B-ETH_USDT', 'B-BCH_USDT']
+2026-11-22 13:26:08 price sample B-NATGAS_USDT: {'fr': -5.376e-05, 'h': 3.801, 'l': 3.751, 'v': 9479727.1349, 'ls': 3.768, 'pc': 0.106, 'mkt': 'NATGASUSDT', 'btST': 1795334158059, 'ctRT': 1795334158471, 'skw': 21, 'mp': 3.768, 'efr': 0, 'bmST': 1795334167686, 'cmRT': 1795334167812}
+2026-11-22 13:30:52 coins with usable candles: 505 of 505
+2026-11-22 13:30:52 REAL MOVER SKYAI +57.9% (we had picked it: True)
+2026-11-22 13:30:52 graded SIREN: MISS peak 3.6% dip -3.7% plan OPEN
+2026-11-22 13:30:52 graded VANA: PARTIAL peak 15.2% dip -4.1% plan T1
+2026-11-22 13:30:52 graded AGLD: MISS peak 9.5% dip -1.9% plan OPEN
+2026-11-22 13:30:52 graded USDC: MISS peak 0.1% dip -0.0% plan OPEN
+2026-11-22 13:30:52 graded FIGHT: MISS peak 3.2% dip -4.1% plan OPEN
+2026-11-22 13:30:52 graded SONIC: MISS peak 7.1% dip -2.2% plan OPEN
