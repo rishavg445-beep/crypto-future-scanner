@@ -58,3 +58,31 @@
 2026-11-22 13:30:52 graded USDC: MISS peak 0.1% dip -0.0% plan OPEN
 2026-11-22 13:30:52 graded FIGHT: MISS peak 3.2% dip -4.1% plan OPEN
 2026-11-22 13:30:52 graded SONIC: MISS peak 7.1% dip -2.2% plan OPEN
+2026-11-22 20:29:46 instruments: 505, sample ['B-POWR_USDT', 'B-STEEM_USDT', 'B-SUPER_USDT']
+2026-11-22 20:29:47 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.801, 'l': 3.745, 'v': 10323516.8106, 'ls': 3.753, 'pc': -0.556, 'mkt': 'NATGASUSDT', 'btST': 1795359582947, 'ctRT': 1795359583486, 'skw': -4, 'mp': 3.75342205, 'efr': 0, 'bmST': 1795359585685, 'cmRT': 1795359585775}
+2026-11-22 20:34:27 coins with usable candles: 505 of 505
+2026-11-22 20:34:27 REAL PUMP NAORIS +85% (picked first: None)
+2026-11-22 20:34:27 REAL PUMP PIPPIN +104% (picked first: None)
+2026-11-22 20:34:27 REAL PUMP KERNEL +58% (picked first: None)
+2026-11-22 20:34:27 REAL PUMP SKYAI +51% (picked first: None)
+2026-11-22 20:34:27 REAL PUMP BULLA +51% (picked first: None)
+2026-11-22 20:34:27 REAL PUMP IDOL +52% (picked first: None)
+2026-11-22 20:34:27 REAL PUMP AKE +107% (picked first: None)
+2026-11-22 20:34:27 REAL PUMP EVAA +52% (picked first: None)
+2026-11-22 20:34:27 REAL PUMP YB +52% (picked first: None)
+2026-11-22 20:34:27 REAL PUMP PIEVERSE +74% (picked first: None)
+2026-11-22 20:34:27 REAL PUMP PIEVERSE +79% (picked first: None)
+2026-11-22 20:34:27 REAL PUMP MMT +103% (picked first: None)
+2026-11-22 20:34:27 REAL PUMP MMT +65% (picked first: None)
+2026-11-22 20:34:27 REAL PUMP BTW +57% (picked first: None)
+2026-11-22 20:34:27 REAL PUMP BLESS +60% (picked first: None)
+2026-11-22 20:34:27 REAL PUMP BLESS +89% (picked first: None)
+2026-11-22 20:34:27 REAL PUMP IRYS +76% (picked first: None)
+2026-11-22 20:34:27 backfill done: 17 pumps found in the last ~7 days, 1500 quiet samples
+2026-11-22 20:34:27 graded SKYAI: PARTIAL peak 27.2% dip -2.2% plan OPEN
+2026-11-22 20:34:27 graded SAPIEN: MISS peak -3.0% dip -6.2% plan OPEN
+2026-11-22 20:34:27 graded BLESS: MISS peak 14.6% dip -16.3% plan OPEN
+2026-11-22 20:34:27 graded LQTY: MISS peak 4.7% dip 0.5% plan OPEN
+2026-11-22 20:34:27 graded PARTI: MISS peak 2.4% dip -0.8% plan OPEN
+2026-11-22 20:34:27 graded YB: MISS peak 8.7% dip -0.7% plan OPEN
+2026-11-22 20:34:27 review: learning data: 17 pumps, 1500 quiet samples; weights kept (test score old 0.70, new 0.69; need +0.03); stop/target changed to stop 5 x ATR, T1 4.0 R (total R -7.0 -> -4.0)
