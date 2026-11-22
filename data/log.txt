@@ -37,3 +37,14 @@
 2026-11-22 01:36:30 graded BAN: MISS peak 12.9% dip 2.5% plan OPEN
 2026-11-22 01:36:30 graded PROM: MISS peak -2.3% dip -15.0% plan STOP
 2026-11-22 01:36:30 graded LISTA: MISS peak 1.8% dip 0.2% plan STOP
+2026-11-22 05:47:10 instruments: 505, sample ['B-1000PEPE_USDT', 'B-PHAROS_USDT', 'B-ONG_USDT']
+2026-11-22 05:47:10 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.801, 'l': 3.751, 'v': 10179906.2685, 'ls': 3.79, 'pc': 0.159, 'mkt': 'NATGASUSDT', 'btST': 1795306629769, 'ctRT': 1795306630497, 'skw': 49, 'mp': 3.791, 'efr': 0, 'bmST': 1795306629686, 'cmRT': 1795306629801}
+2026-11-22 05:51:41 coins with usable candles: 505 of 505
+2026-11-22 05:51:41 graded HOT: MISS peak 2.2% dip -8.2% plan OPEN
+2026-11-22 05:51:41 graded KERNEL: MISS peak 7.3% dip -5.0% plan OPEN
+2026-11-22 05:51:41 graded HMSTR: MISS peak 0.7% dip -5.5% plan OPEN
+2026-11-22 05:51:41 graded SUSHI: MISS peak 2.1% dip -0.3% plan STOP
+2026-11-22 05:51:41 graded BLUR: MISS peak 1.8% dip -2.3% plan OPEN
+2026-11-22 05:51:41 graded TNSR: MISS peak 2.8% dip -6.3% plan OPEN
+2026-11-22 05:51:41 graded RARE: PARTIAL peak 21.0% dip -2.6% plan OPEN
+2026-11-22 05:51:41 graded TWT: MISS peak 5.8% dip -7.5% plan STOP
