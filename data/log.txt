@@ -89,3 +89,7 @@
 2026-11-22 21:41:31 instruments: 505, sample ['B-LINEA_USDT', 'B-PAXG_USDT', 'B-ATH_USDT']
 2026-11-22 21:41:31 price sample B-NATGAS_USDT: {'fr': -5.389e-05, 'h': 3.801, 'l': 3.738, 'v': 10294026.6649, 'ls': 3.75, 'pc': -0.504, 'mkt': 'NATGASUSDT', 'btST': 1795363885469, 'ctRT': 1795363886477, 'skw': -25, 'mp': 3.74953687, 'efr': -3.863e-05, 'bmST': 1795363890685, 'cmRT': 1795363890795}
 2026-11-22 21:45:49 coins with usable candles: 505 of 505
+2026-11-23 02:31:03 instruments: 505, sample ['B-LIT_USDT', 'B-ESP_USDT', 'B-MANTRA_USDT']
+2026-11-23 02:31:03 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.801, 'l': 3.726, 'v': 9654547.6757, 'ls': 3.742, 'pc': -1.526, 'mkt': 'NATGASUSDT', 'btST': 1795381223485, 'ctRT': 1795381224496, 'skw': -4, 'mp': 3.742, 'efr': 0, 'bmST': 1795381262686, 'cmRT': 1795381262790}
+2026-11-23 02:35:07 coins with usable candles: 505 of 505
+2026-11-23 02:35:07 REAL PUMP BULLA +76% (picked first: None)
