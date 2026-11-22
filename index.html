@@ -1,85 +1,110 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Futures Pump Scanner</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0e1116">
+<title>Pump Scanner</title>
 <style>
-:root{--bg:#0e1116;--cd:#181d25;--tx:#e8ecf1;--mu:#8b95a3;--ac:#7f93ff;--g:#2fb36b;--r:#e5534b;--a:#e0a43a;--bd:#2a313c}
-@media(prefers-color-scheme:light){:root{--bg:#f6f7f9;--cd:#fff;--tx:#1b1f24;--mu:#5b6573;--ac:#2f4fd8;--bd:#d9dde3}}
-*{box-sizing:border-box}body{margin:0;padding:12px;background:var(--bg);color:var(--tx);font:15px/1.45 system-ui,sans-serif;max-width:640px;margin:auto}
-h1{font-size:18px;margin:4px 0}.mu{color:var(--mu);font-size:12.5px}
-.tabs{display:flex;gap:6px;margin:10px 0;position:sticky;top:0;background:var(--bg);padding:6px 0}
-.tabs button{flex:1;padding:9px 4px;border:1px solid var(--bd);background:var(--cd);color:var(--tx);border-radius:9px;font-size:13.5px}
-.tabs button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
-.c{background:var(--cd);border:1px solid var(--bd);border-radius:12px;padding:11px;margin-bottom:9px}
-.h{display:flex;justify-content:space-between;align-items:center}.n{font-weight:700;font-size:16px}
-.p{background:var(--ac);color:#fff;border-radius:8px;padding:1px 8px;font-size:12.5px}
-.g{display:grid;grid-template-columns:repeat(2,1fr);gap:3px 10px;margin-top:7px;font-size:13px;color:var(--mu)}.g b{color:var(--tx);font-weight:600}
-.pl{margin-top:8px;padding:8px;border-radius:8px;border:1px dashed var(--bd);font-size:13px}
+:root{--bg:#0e1116;--cd:#171c24;--c2:#1f2631;--tx:#eef1f5;--mu:#93a0b0;--ac:#7f93ff;--g:#34c27a;--r:#ef5b52;--a:#e6a83c;--bd:#2b3340}
+@media(prefers-color-scheme:light){:root{--bg:#f4f6f9;--cd:#fff;--c2:#eef1f6;--tx:#1b1f24;--mu:#5b6573;--ac:#3550e0;--bd:#dde1e8}}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.4 system-ui,sans-serif;padding:0 12px calc(78px + env(safe-area-inset-bottom));max-width:620px;margin:auto}
+header{position:sticky;top:0;background:var(--bg);padding:max(10px,env(safe-area-inset-top)) 0 8px;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:8px}
+h1{font-size:20px;margin:0}.sub{font-size:12.5px;color:var(--mu);margin-top:2px}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;background:var(--g)}.dot.old{background:var(--a)}
+.rf{border:1px solid var(--bd);background:var(--cd);color:var(--tx);border-radius:12px;width:44px;height:44px;font-size:20px}
+nav{position:fixed;left:0;right:0;bottom:0;background:var(--cd);border-top:1px solid var(--bd);display:flex;padding:6px 8px calc(6px + env(safe-area-inset-bottom));z-index:9;max-width:620px;margin:auto}
+nav button{flex:1;border:0;background:none;color:var(--mu);padding:6px 0;font-size:11.5px;border-radius:10px}
+nav button span{display:block;font-size:20px;line-height:1.2}nav button.on{color:var(--ac);background:var(--c2);font-weight:700}
+.c{background:var(--cd);border:1px solid var(--bd);border-radius:16px;padding:14px;margin:0 0 12px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.rk{background:var(--c2);color:var(--mu);border-radius:8px;padding:2px 8px;font-size:12.5px;font-weight:700}
+.coin{font-size:22px;font-weight:800}.px{font-size:19px;font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.chip{background:var(--c2);border-radius:20px;padding:4px 10px;font-size:13px;color:var(--mu)}.chip b{color:var(--tx)}
+.plan{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:6px}
+.pb{background:var(--c2);border-radius:12px;padding:9px 10px}.pb small{display:block;color:var(--mu);font-size:11.5px;text-transform:uppercase;letter-spacing:.4px}.pb b{font-size:16px}
+.pb.s b{color:var(--r)}.pb.t b{color:var(--g)}
+.lev{margin-top:10px;font-size:13px;color:var(--mu)}.lev b{color:var(--tx)}
+details{margin-top:8px;font-size:13px;color:var(--mu)}summary{padding:6px 0;cursor:pointer}
 .up{color:var(--g)}.dn{color:var(--r)}.am{color:var(--a)}
-.warn{font-size:12px;color:var(--mu);margin-top:12px}
-.t{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:5px 6px;border-bottom:1px solid var(--bd);text-align:left}
-.err{background:rgba(229,83,75,.12);border:1px solid var(--r);padding:8px;border-radius:8px;font-size:13px;margin:8px 0}
+.big{font-size:26px;font-weight:800}
+.badge{border-radius:20px;padding:3px 10px;font-size:12px;font-weight:700}
+.b1{background:rgba(52,194,122,.15);color:var(--g)}.b2{background:rgba(239,91,82,.15);color:var(--r)}.b3{background:var(--c2);color:var(--mu)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.grid .pb b{font-size:20px}
+.bar{height:10px;border-radius:6px;background:var(--c2);overflow:hidden;margin:8px 0}.bar i{display:block;height:100%;background:var(--ac)}
+h2{font-size:15px;margin:16px 2px 8px;color:var(--mu);font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:8px 4px;border-bottom:1px solid var(--bd);text-align:left}th{color:var(--mu);font-weight:600;font-size:12px}
+.note{font-size:12px;color:var(--mu);margin:10px 2px}.err{background:rgba(239,91,82,.12);border:1px solid var(--r);padding:10px;border-radius:12px;font-size:13px;margin-bottom:10px}
+.mu{color:var(--mu);font-size:13px}p{margin:6px 0}
 </style></head><body>
-<h1>Futures Pump Scanner</h1>
-<div class="mu" id="upd">Loading...</div>
-<div class="tabs" id="tabs"></div>
-<div id="out"></div>
-<div class="warn">A watchlist, not advice and not a prediction. Pumps are rare and many picks will fail. Prices are converted from USDT at the rate shown. Suggested leverage assumes you accept losing about 20% of your margin if the stop hits. Test on paper first.</div>
+<header><div><h1>Pump Scanner</h1><div class="sub" id="sub">Loading...</div></div><button class="rf" id="rf" aria-label="Refresh">&#8635;</button></header>
+<div id="msg"></div><main id="out"></main>
+<nav id="nav"></nav>
 <script>
 const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-let D=null,R=null,tab="picks";
-function money(v,cur){if(v==null||isNaN(v))return"-";let x=v,s="";if(cur==="USDT"&&R){x=v*R;s="\u20B9"}else if(cur==="USDT"){s="$"}else s="\u20B9";
+const TABS=[["picks","\uD83C\uDFAF","Picks"],["movers","\uD83D\uDE80","Pumps"],["report","\uD83D\uDCCA","Report"],["strategy","\u2699\uFE0F","Strategy"]];
+let D=null,R=null;
+const tab=()=>{const h=location.hash.slice(1);return TABS.some(t=>t[0]===h)?h:"picks"};
+function money(v,cur){if(v==null||isNaN(v))return"-";let x=v,s="\u20B9";if(cur==="USDT"){if(R)x=v*R;else s="$"}
  const d=x>=1000?0:x>=100?1:x>=1?2:x>=0.01?4:6;return s+x.toLocaleString("en-IN",{maximumFractionDigits:d})}
 const pc=v=>v==null?"-":(v>=0?"+":"")+Number(v).toFixed(1)+"%";
 const cl=v=>v>=0?"up":"dn";
-const ago=t=>{const m=Math.round((Date.now()/1000-t)/60);return m<60?m+"m ago":m<2880?Math.round(m/60)+"h ago":Math.round(m/1440)+"d ago"};
+const ago=t=>{const m=Math.max(0,Math.round((Date.now()/1000-t)/60));return m<60?m+" min ago":m<2880?Math.round(m/60)+" h ago":Math.round(m/1440)+" days ago"};
 async function getRate(){
- try{const r=await fetch("https://api.coindcx.com/exchange/ticker");const a=await r.json();const x=a.find(t=>t.market==="USDTINR");if(x&&+x.last_price>50)return +x.last_price}catch(e){}
- try{const r=await fetch("https://open.er-api.com/v6/latest/USD");const a=await r.json();if(a.rates&&a.rates.INR)return +a.rates.INR}catch(e){}
+ try{const a=await (await fetch("https://api.coindcx.com/exchange/ticker")).json();const x=a.find(t=>t.market==="USDTINR");if(x&&+x.last_price>50)return +x.last_price}catch(e){}
+ try{const a=await (await fetch("https://open.er-api.com/v6/latest/USD")).json();if(a.rates&&a.rates.INR)return +a.rates.INR}catch(e){}
  return null}
 function picks(){
- if(!D.picks.length)return'<div class="c">No picks right now. Check the Strategy tab for notes.</div>';
- return D.picks.map(p=>`<div class="c"><div class="h"><span class="n">#${p.rank} ${esc(p.coin)}</span><span class="p">score ${p.score}</span></div>
- <div class="g"><span>Price <b>${money(p.price,p.cur)}</b></span><span>24h <b class="${cl(p.chg24)}">${pc(p.chg24)}</b></span>
- <span>Volume vs avg <b>${p.vr}x</b></span><span>Squeeze <b>${p.sq}</b></span>
- <span>Last 4h <b class="${cl(p.mom4)}">${pc(p.mom4)}</b></span><span>Funding <b>${p.fund==null?"-":(p.fund*100).toFixed(4)+"%"}</b></span></div>
- <div class="pl"><div>Entry zone: <b>${money(p.entry_lo,p.cur)}</b> to <b>${money(p.entry_hi,p.cur)}</b></div>
- <div>Stop loss: <b class="dn">${money(p.stop,p.cur)}</b> (risk ${p.risk_pct}%)</div>
- <div>Target 1: <b class="up">${money(p.t1,p.cur)}</b> &nbsp; Target 2: <b class="up">${money(p.t2,p.cur)}</b></div>
- <div class="mu">After T1, move stop to entry. Leverage idea: <b>${p.lev_suggest}x</b> (never above ${p.lev_max}x, or liquidation comes too near the stop).</div></div></div>`).join("")}
+ if(!D.picks.length)return'<div class="c">No picks right now.</div>';
+ return D.picks.map(p=>`<div class="c"><div class="row"><span class="rk">#${p.rank}</span><span class="rk">score ${p.score}</span></div>
+ <div class="row" style="margin-top:8px"><span class="coin">${esc(p.coin)}</span><span class="px">${money(p.price,p.cur)}</span></div>
+ <div class="chips"><span class="chip">24h <b class="${cl(p.chg24)}">${pc(p.chg24)}</b></span><span class="chip">Volume <b>${p.vr}x</b></span><span class="chip">4h <b class="${cl(p.mom4)}">${pc(p.mom4)}</b></span></div>
+ <div class="plan"><div class="pb"><small>Entry zone</small><b>${money(p.entry_lo,p.cur)}</b><div class="mu">to ${money(p.entry_hi,p.cur)}</div></div>
+ <div class="pb s"><small>Stop loss</small><b>${money(p.stop,p.cur)}</b><div class="mu">risk ${p.risk_pct}%</div></div>
+ <div class="pb t"><small>Target 1</small><b>${money(p.t1,p.cur)}</b></div><div class="pb t"><small>Target 2</small><b>${money(p.t2,p.cur)}</b></div></div>
+ <div class="lev">Leverage idea <b>${p.lev_suggest}x</b> &middot; never above <b>${p.lev_max}x</b>. After Target 1, move stop to entry.</div>
+ <details><summary>More signals</summary>Squeeze ${p.sq} (below 1 = tight range)<br>Funding ${p.fund==null?"-":(p.fund*100).toFixed(4)+"%"}</details></div>`).join("")}
 function movers(){
- const m=D.movers7d||D.movers_7d||{total:0,caught:0};
- let h=`<div class="c">Last 7 days: <b>${m.total}</b> real movers (up 50%+ in 24h). We had picked <b>${m.caught}</b> of them beforehand.</div>`;
- if(!D.movers.length)return h+'<div class="c">No 50%+ movers recorded yet.</div>';
- return h+'<div class="c t"><table><tr><th>Coin</th><th>24h</th><th>Seen</th><th>Picked first?</th></tr>'+D.movers.map(x=>`<tr><td><b>${esc(x.coin)}</b></td><td class="up">${pc(x.chg24)}</td><td>${ago(x.t)}</td><td>${x.was_picked?"Yes":"No"}</td></tr>`).join("")+"</table></div>"}
-function sbox(l,s){const hr=s.n?Math.round(s.hit/s.n*100):0,pr=s.n?Math.round((s.hit+s.partial)/s.n*100):0;
- return `<div class="c"><div class="n">${l}</div><div class="g"><span>Picks graded <b>${s.n}</b></span><span>HIT 50%+ <b class="up">${s.hit} (${hr}%)</b></span>
- <span>PARTIAL 15-49% <b class="am">${s.partial}</b></span><span>MISS <b class="dn">${s.miss}</b></span>
- <span>Avg peak <b>${s.avg_peak}%</b></span><span>Avg dip first <b>${s.avg_dip}%</b></span>
- <span>Plan hit T1 <b>${s.plan_t1}</b></span><span>Plan stopped <b>${s.plan_stop}</b></span>
- <span>Stopped, then pumped <b>${s.shakeout}</b></span><span>Up 15%+ <b>${pr}%</b></span></div></div>`}
+ const m=D.movers_7d||{total:0,tracked:0,caught:0};
+ let h=`<div class="c"><div class="big">${m.total}</div><div class="mu">real pumps (50%+ rise from a low within 24h) in the last 7 days</div>
+ <p class="mu">${m.tracked?`Since the scanner started: we had picked <b>${m.caught}</b> of <b>${m.tracked}</b> beforehand.`:"Picked-first stats start once the scanner has run for a day or two."}</p></div>`;
+ if(!D.movers.length)return h+'<div class="c">No pumps recorded yet.</div>';
+ return h+D.movers.map(x=>`<div class="c"><div class="row"><span class="coin">${esc(x.coin)}</span><span class="big up">${pc(x.gain)}</span></div>
+ <div class="row" style="margin-top:6px"><span class="mu">Started ${ago(x.t)}</span>${x.was_picked===true?'<span class="badge b1">Picked first</span>':x.was_picked===false?'<span class="badge b2">Missed</span>':'<span class="badge b3">Before scanner</span>'}</div></div>`).join("")}
+function sbox(l,s){const hr=s.n?Math.round(s.hit/s.n*100):0;
+ return `<h2>${l}</h2><div class="grid"><div class="pb"><small>Picks graded</small><b>${s.n}</b></div><div class="pb t"><small>Hit 50%+</small><b>${s.hit} (${hr}%)</b></div>
+ <div class="pb"><small>Partial 15-49%</small><b class="am">${s.partial}</b></div><div class="pb s"><small>Miss</small><b>${s.miss}</b></div>
+ <div class="pb"><small>Avg peak</small><b>${s.avg_peak}%</b></div><div class="pb"><small>Avg dip first</small><b>${s.avg_dip}%</b></div>
+ <div class="pb"><small>Plan hit T1</small><b>${s.plan_t1}</b></div><div class="pb"><small>Stopped, then pumped</small><b>${s.shakeout}</b></div></div>`}
 function report(){
  let h=sbox("Last 7 days",D.stats.d7)+sbox("Last 30 days",D.stats.d30)+sbox("All time",D.stats.all);
+ h+="<h2>Recent picks</h2>";
  if(!D.report.length)return h+'<div class="c">Picks are graded 24 hours after they are made. First grades appear tomorrow.</div>';
- return h+'<div class="c t"><table><tr><th>Coin</th><th>Result</th><th>Peak</th><th>Dip</th><th>Plan</th></tr>'+D.report.map(x=>`<tr><td><b>${esc(x.coin)}</b></td><td class="${x.grade==="HIT"?"up":x.grade==="PARTIAL"?"am":"dn"}">${x.grade}</td><td>${pc(x.peak)}</td><td>${pc(x.dip)}</td><td>${x.plan||"-"}</td></tr>`).join("")+"</table></div>"}
+ return h+'<div class="c"><table><tr><th>Coin</th><th>Result</th><th>Peak</th><th>Dip</th><th>Plan</th></tr>'+D.report.map(x=>`<tr><td><b>${esc(x.coin)}</b></td><td class="${x.grade==="HIT"?"up":x.grade==="PARTIAL"?"am":"dn"}">${x.grade}</td><td>${pc(x.peak)}</td><td>${pc(x.dip)}</td><td>${x.plan||"-"}</td></tr>`).join("")+"</table></div>"}
 function strategy(){
- const s=D.strategy,w=s.weights;
- let h=`<div class="c"><div class="n">Strategy v${s.version}</div><div class="g"><span>Volume weight <b>${w.vol}</b></span><span>Squeeze weight <b>${w.squeeze}</b></span><span>Momentum weight <b>${w.mom}</b></span><span>Funding weight <b>${w.fund}</b></span>
- <span>Stop <b>${s.stop_atr} x ATR</b></span><span>T1 / T2 <b>${s.t1_r}R / ${s.t2_r}R</b></span></div></div>`;
- h+='<div class="c"><div class="n">Nightly reviews</div>'+(D.history.length?D.history.map(x=>`<p><b>${esc(x.date)}</b> ${x.changed?'<span class="up">CHANGED</span>':"kept"} v${x.version}<br><span class="mu">${esc(x.text)}</span></p>`).join(""):'<p class="mu">The first review runs after 11 PM IST.</p>')+"</div>";
+ const s=D.strategy,w=s.weights,L=D.learn||{pos:0,neg:0,need_pos:8},pct=Math.min(100,Math.round(L.pos/L.need_pos*100));
+ let h=`<div class="c"><div class="row"><b>Strategy v${s.version}</b><span class="badge b3">${L.pos>=L.need_pos?"can learn":"collecting data"}</span></div>
+ <p class="mu">Learning data: <b>${L.pos}</b> real pumps and <b>${L.neg}</b> quiet samples. It needs ${L.need_pos} pumps before it may change anything.</p><div class="bar"><i style="width:${pct}%"></i></div></div>
+ <h2>Current rules</h2><div class="grid"><div class="pb"><small>Volume weight</small><b>${w.vol}</b></div><div class="pb"><small>Squeeze weight</small><b>${w.squeeze}</b></div>
+ <div class="pb"><small>Momentum weight</small><b>${w.mom}</b></div><div class="pb"><small>Funding weight</small><b>${w.fund}</b></div>
+ <div class="pb"><small>Stop</small><b>${s.stop_atr} x ATR</b></div><div class="pb"><small>Targets</small><b>${s.t1_r}R / ${s.t2_r}R</b></div></div><h2>Reviews</h2>`;
+ h+=D.history.length?D.history.map(x=>`<div class="c"><div class="row"><b>${esc(x.date)}</b><span class="badge ${x.changed?"b1":"b3"}">${x.changed?"changed":"kept"} v${x.version}</span></div><p class="mu">${esc(x.text)}</p></div>`).join(""):'<div class="c mu">The first review runs after 11 PM IST.</div>';
  return h}
-function show(){
- document.querySelectorAll("#tabs button").forEach(b=>b.classList.toggle("on",b.dataset.k===tab));
- $("out").innerHTML={picks,movers,report,strategy}[tab]()}
-async function init(){
- $("tabs").innerHTML=[["picks","Picks"],["movers","Movers"],["report","Report"],["strategy","Strategy"]].map(a=>`<button data-k="${a[0]}">${a[1]}</button>`).join("");
- $("tabs").onclick=e=>{if(e.target.dataset.k){tab=e.target.dataset.k;show()}};
+function show(){const t=tab();
+ $("nav").innerHTML=TABS.map(a=>`<button data-k="${a[0]}" class="${a[0]===t?"on":""}"><span>${a[1]}</span>${a[2]}</button>`).join("");
+ if(D){$("out").innerHTML={picks,movers,report,strategy}[t]()}}
+async function load(first){
  try{const r=await fetch("data/latest.json?"+Date.now());if(!r.ok)throw new Error("HTTP "+r.status);D=await r.json()}
- catch(e){$("upd").innerHTML='<div class="err">Could not load data/latest.json ('+esc(e.message)+'). The scanner may not have run yet.</div>';return}
- R=await getRate();
- $("upd").textContent="Updated "+D.updated_ist+" | "+D.coins_scanned+" coins scanned | USDT to INR: "+(R?R.toFixed(2):"unavailable (showing USDT)");
- if(D.errors&&D.errors.length)$("upd").insertAdjacentHTML("afterend",'<div class="err">Some data requests failed in the last run. See data/log.txt.</div>');
+ catch(e){$("msg").innerHTML='<div class="err">Could not load data ('+esc(e.message)+'). The scanner may not have run yet.</div>';return}
+ if(!R)R=await getRate();
+ const age=(Date.now()/1000-D.updated)/60;
+ $("sub").innerHTML=`<span class="dot ${age>100?"old":""}"></span>${D.updated_ist} &middot; ${D.coins_scanned} coins &middot; \u20B9${R?R.toFixed(2):"?"}/USDT`;
+ $("msg").innerHTML=(D.errors&&D.errors.length?'<div class="err">Some data requests failed in the last run. See data/log.txt.</div>':"")+(age>180?'<div class="err">Data is over 3 hours old. Check the Actions tab on GitHub.</div>':"");
  show()}
-init();
+$("nav").onclick=e=>{const b=e.target.closest("button");if(b){location.hash=b.dataset.k;scrollTo(0,0)}};
+addEventListener("hashchange",()=>{show();scrollTo(0,0)});
+$("rf").onclick=()=>load();
+setInterval(()=>{if(!document.hidden)load()},300000);
+show();load();
 </script></body></html>
