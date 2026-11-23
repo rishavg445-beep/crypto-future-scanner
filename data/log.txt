@@ -93,3 +93,23 @@
 2026-11-23 02:31:03 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.801, 'l': 3.726, 'v': 9654547.6757, 'ls': 3.742, 'pc': -1.526, 'mkt': 'NATGASUSDT', 'btST': 1795381223485, 'ctRT': 1795381224496, 'skw': -4, 'mp': 3.742, 'efr': 0, 'bmST': 1795381262686, 'cmRT': 1795381262790}
 2026-11-23 02:35:07 coins with usable candles: 505 of 505
 2026-11-23 02:35:07 REAL PUMP BULLA +76% (picked first: None)
+2026-11-23 07:31:57 instruments: 505, sample ['B-NEIRO_USDT', 'B-BR_USDT', 'B-MANTRA_USDT']
+2026-11-23 07:31:57 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.796, 'l': 3.621, 'v': 20848299.5928, 'ls': 3.624, 'pc': -4.481, 'mkt': 'NATGASUSDT', 'btST': 1795399314247, 'ctRT': 1795399315491, 'skw': 13, 'mp': 3.624, 'efr': 0, 'bmST': 1795399316685, 'cmRT': 1795399316791}
+2026-11-23 07:36:39 coins with usable candles: 505 of 505
+2026-11-23 07:36:39 REAL PUMP ACE +175% (picked first: False)
+2026-11-23 07:36:39 graded CLO: MISS peak 2.8% dip -4.9% plan OPEN
+2026-11-23 07:36:39 graded TOWNS: MISS peak 0.3% dip -0.7% plan OPEN
+2026-11-23 07:36:39 graded CYBER: MISS peak 4.2% dip -1.0% plan OPEN
+2026-11-23 07:36:39 graded ORCA: MISS peak 7.0% dip 0.2% plan OPEN
+2026-11-23 07:36:39 graded CAP: MISS peak 6.6% dip -0.1% plan OPEN
+2026-11-23 07:36:39 graded BULLA: HIT peak 53.9% dip -12.6% plan STOP
+2026-11-23 07:36:39 graded MAGMA: MISS peak 9.9% dip -3.8% plan OPEN
+2026-11-23 07:36:39 graded KAVA: MISS peak 3.1% dip -5.6% plan STOP
+2026-11-23 07:36:39 graded BARD: MISS peak 2.8% dip 0.2% plan OPEN
+2026-11-23 07:36:39 graded PIEVERSE: HIT peak 57.4% dip -3.1% plan T1
+2026-11-23 07:36:39 graded COOKIE: MISS peak 5.6% dip -5.0% plan OPEN
+2026-11-23 07:36:39 graded ENSO: MISS peak 5.8% dip -2.4% plan OPEN
+2026-11-23 07:36:39 graded ESPORTS: PARTIAL peak 17.2% dip 1.0% plan OPEN
+2026-11-23 07:36:39 graded OG: MISS peak 1.2% dip -2.1% plan OPEN
+2026-11-23 07:36:39 graded INIT: MISS peak 3.6% dip -2.4% plan OPEN
+2026-11-23 07:36:39 graded RARE: MISS peak 8.3% dip -5.0% plan OPEN
