@@ -116,3 +116,15 @@
 2026-11-23 12:52:01 instruments: 505, sample ['B-YGG_USDT', 'B-DODOX_USDT', 'B-SEI_USDT']
 2026-11-23 12:52:01 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.784, 'l': 3.567, 'v': 25752508.6293, 'ls': 3.57, 'pc': -5.053, 'mkt': 'NATGASUSDT', 'btST': 1795418515757, 'ctRT': 1795418516495, 'skw': 53, 'mp': 3.57034625, 'efr': 0, 'bmST': 1795418520685, 'cmRT': 1795418520796}
 2026-11-23 12:56:56 coins with usable candles: 505 of 505
+2026-11-23 18:09:15 instruments: 505, sample ['B-XVS_USDT', 'B-BLUR_USDT', 'B-SUI_USDT']
+2026-11-23 18:09:15 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.772, 'l': 3.476, 'v': 39248235.6773, 'ls': 3.515, 'pc': -6.714, 'mkt': 'NATGASUSDT', 'btST': 1795437554907, 'ctRT': 1795437555507, 'skw': 27, 'mp': 3.5141042, 'efr': 0, 'bmST': 1795437554685, 'cmRT': 1795437554792}
+2026-11-23 18:13:29 coins with usable candles: 505 of 505
+2026-11-23 18:13:29 REAL PUMP PROM +69% (picked first: True)
+2026-11-23 18:13:29 REAL PUMP ARIA +55% (picked first: None)
+2026-11-23 18:13:29 REAL PUMP BLESS +56% (picked first: None)
+2026-11-23 18:13:29 graded O: MISS peak 4.6% dip -2.5% plan OPEN
+2026-11-23 18:13:29 graded ELSA: PARTIAL peak 43.3% dip -1.7% plan T1
+2026-11-23 18:13:29 graded BMT: MISS peak 6.4% dip -4.1% plan OPEN
+2026-11-23 18:13:29 graded BSB: MISS peak 4.1% dip -0.2% plan OPEN
+2026-11-23 18:13:29 graded 1000000MOG: MISS peak 3.0% dip -1.0% plan OPEN
+2026-11-23 18:13:29 graded DOS: MISS peak 6.0% dip -0.9% plan OPEN
