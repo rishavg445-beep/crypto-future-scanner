@@ -128,3 +128,6 @@
 2026-11-23 18:13:29 graded BSB: MISS peak 4.1% dip -0.2% plan OPEN
 2026-11-23 18:13:29 graded 1000000MOG: MISS peak 3.0% dip -1.0% plan OPEN
 2026-11-23 18:13:29 graded DOS: MISS peak 6.0% dip -0.9% plan OPEN
+2026-11-23 19:22:46 instruments: 505, sample ['B-WET_USDT', 'B-PENDLE_USDT', 'B-ARKM_USDT']
+2026-11-23 19:22:46 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.767, 'l': 3.476, 'v': 47826641.5536, 'ls': 3.506, 'pc': -6.78, 'mkt': 'NATGASUSDT', 'btST': 1795441964600, 'ctRT': 1795441965498, 'skw': 46, 'mp': 3.506, 'efr': 0, 'bmST': 1795441965685, 'cmRT': 1795441965794}
+2026-11-23 19:27:21 coins with usable candles: 505 of 505
