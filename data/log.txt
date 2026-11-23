@@ -113,3 +113,6 @@
 2026-11-23 07:36:39 graded OG: MISS peak 1.2% dip -2.1% plan OPEN
 2026-11-23 07:36:39 graded INIT: MISS peak 3.6% dip -2.4% plan OPEN
 2026-11-23 07:36:39 graded RARE: MISS peak 8.3% dip -5.0% plan OPEN
+2026-11-23 12:52:01 instruments: 505, sample ['B-YGG_USDT', 'B-DODOX_USDT', 'B-SEI_USDT']
+2026-11-23 12:52:01 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.784, 'l': 3.567, 'v': 25752508.6293, 'ls': 3.57, 'pc': -5.053, 'mkt': 'NATGASUSDT', 'btST': 1795418515757, 'ctRT': 1795418516495, 'skw': 53, 'mp': 3.57034625, 'efr': 0, 'bmST': 1795418520685, 'cmRT': 1795418520796}
+2026-11-23 12:56:56 coins with usable candles: 505 of 505
