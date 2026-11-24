@@ -167,3 +167,13 @@
 2026-11-24 12:01:55 graded STEEM: MISS peak 5.4% dip -0.2% plan OPEN
 2026-11-24 12:01:55 graded XPL: MISS peak 10.3% dip -0.2% plan OPEN
 2026-11-24 12:01:55 graded CL: MISS peak 0.9% dip -0.3% plan STOP
+2026-11-24 16:29:06 instruments: 505, sample ['B-GRAM_USDT', 'B-MYX_USDT', 'B-MERL_USDT']
+2026-11-24 16:29:06 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.621, 'l': 3.446, 'v': 48400186.984, 'ls': 3.586, 'pc': 2.574, 'mkt': 'NATGASUSDT', 'btST': 1795517942535, 'ctRT': 1795517943491, 'skw': 23, 'mp': 3.58614694, 'efr': 0, 'bmST': 1795517945361, 'cmRT': 1795517945532}
+2026-11-24 16:33:30 coins with usable candles: 505 of 505
+2026-11-24 16:33:30 REAL PUMP AIOT +51% (picked first: False)
+2026-11-24 16:33:30 graded HMSTR: MISS peak 2.1% dip -1.3% plan OPEN
+2026-11-24 16:33:30 graded LQTY: MISS peak 3.0% dip -2.9% plan OPEN
+2026-11-24 16:33:30 graded GRIFFAIN: MISS peak 3.3% dip -2.0% plan OPEN
+2026-11-24 16:33:30 graded H: MISS peak 8.8% dip -0.8% plan OPEN
+2026-11-24 16:33:30 graded Q: MISS peak 5.5% dip -1.8% plan OPEN
+2026-11-24 16:33:30 graded SWARMS: MISS peak 5.4% dip -1.8% plan OPEN
