@@ -177,3 +177,7 @@
 2026-11-24 16:33:30 graded H: MISS peak 8.8% dip -0.8% plan OPEN
 2026-11-24 16:33:30 graded Q: MISS peak 5.5% dip -1.8% plan OPEN
 2026-11-24 16:33:30 graded SWARMS: MISS peak 5.4% dip -1.8% plan OPEN
+2026-11-24 16:39:05 instruments: 505, sample ['B-BANANAS31_USDT', 'B-BR_USDT', 'B-TRUTH_USDT']
+2026-11-24 16:39:05 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.621, 'l': 3.446, 'v': 48346445.4417, 'ls': 3.582, 'pc': 2.314, 'mkt': 'NATGASUSDT', 'btST': 1795518517720, 'ctRT': 1795518518495, 'skw': 48, 'mp': 3.5825366, 'efr': 0, 'bmST': 1795518543362, 'cmRT': 1795518543632}
+2026-11-24 16:43:07 coins with usable candles: 505 of 505
+2026-11-24 16:43:07 REAL PUMP BLESS +59% (picked first: False)
