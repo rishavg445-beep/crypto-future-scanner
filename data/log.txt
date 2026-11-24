@@ -181,3 +181,17 @@
 2026-11-24 16:39:05 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.621, 'l': 3.446, 'v': 48346445.4417, 'ls': 3.582, 'pc': 2.314, 'mkt': 'NATGASUSDT', 'btST': 1795518517720, 'ctRT': 1795518518495, 'skw': 48, 'mp': 3.5825366, 'efr': 0, 'bmST': 1795518543362, 'cmRT': 1795518543632}
 2026-11-24 16:43:07 coins with usable candles: 505 of 505
 2026-11-24 16:43:07 REAL PUMP BLESS +59% (picked first: False)
+2026-11-25 02:53:45 instruments: 505, sample ['B-LA_USDT', 'B-ESPORTS_USDT', 'B-BTC_USDT']
+2026-11-25 02:53:45 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.753, 'l': 3.527, 'v': 54646994.9428, 'ls': 3.69, 'pc': 4.621, 'mkt': 'NATGASUSDT', 'btST': 1795555420229, 'ctRT': 1795555421479, 'skw': 18, 'mp': 3.68906135, 'efr': 0, 'bmST': 1795555424362, 'cmRT': 1795555424580}
+2026-11-25 02:58:26 coins with usable candles: 505 of 505
+2026-11-25 02:58:26 graded TA: MISS peak 8.9% dip -5.9% plan OPEN
+2026-11-25 02:58:26 graded DOS: MISS peak 11.2% dip -2.1% plan OPEN
+2026-11-25 02:58:26 graded CYS: PARTIAL peak 37.9% dip -0.8% plan OPEN
+2026-11-25 02:58:26 graded MUBARAK: MISS peak 12.2% dip -2.6% plan OPEN
+2026-11-25 02:58:26 graded SKY: PARTIAL peak 15.3% dip -6.8% plan OPEN
+2026-11-25 02:58:26 graded LSK: MISS peak 10.0% dip -2.3% plan OPEN
+2026-11-25 02:58:26 graded ALGO: MISS peak 6.0% dip 0.3% plan OPEN
+2026-11-25 02:58:26 graded MON: PARTIAL peak 20.0% dip -2.8% plan OPEN
+2026-11-25 02:58:26 graded ELSA: MISS peak 11.4% dip -1.1% plan OPEN
+2026-11-25 02:58:26 graded INX: PARTIAL peak 20.7% dip -3.7% plan OPEN
+2026-11-25 02:58:26 graded STBL: MISS peak 9.5% dip -2.8% plan OPEN
