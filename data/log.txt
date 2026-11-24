@@ -131,3 +131,26 @@
 2026-11-23 19:22:46 instruments: 505, sample ['B-WET_USDT', 'B-PENDLE_USDT', 'B-ARKM_USDT']
 2026-11-23 19:22:46 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.767, 'l': 3.476, 'v': 47826641.5536, 'ls': 3.506, 'pc': -6.78, 'mkt': 'NATGASUSDT', 'btST': 1795441964600, 'ctRT': 1795441965498, 'skw': 46, 'mp': 3.506, 'efr': 0, 'bmST': 1795441965685, 'cmRT': 1795441965794}
 2026-11-23 19:27:21 coins with usable candles: 505 of 505
+2026-11-24 06:32:14 instruments: 505, sample ['B-CTR_USDT', 'B-SLX_USDT', 'B-TRUMP_USDT']
+2026-11-24 06:32:15 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.638, 'l': 3.446, 'v': 56424283.5526, 'ls': 3.549, 'pc': -2.151, 'mkt': 'NATGASUSDT', 'btST': 1795482133255, 'ctRT': 1795482134502, 'skw': -20, 'mp': 3.54879825, 'efr': 0, 'bmST': 1795482134685, 'cmRT': 1795482134791}
+2026-11-24 06:36:25 coins with usable candles: 505 of 505
+2026-11-24 06:36:25 REAL PUMP CYS +53% (picked first: False)
+2026-11-24 06:36:25 REAL PUMP EVAA +52% (picked first: False)
+2026-11-24 06:36:26 graded XVG: MISS peak 7.2% dip -1.6% plan OPEN
+2026-11-24 06:36:26 graded BERA: MISS peak 8.9% dip -1.2% plan OPEN
+2026-11-24 06:36:26 graded CATI: MISS peak 3.0% dip -2.4% plan OPEN
+2026-11-24 06:36:26 graded LISTA: PARTIAL peak 23.4% dip -0.8% plan T1
+2026-11-24 06:36:26 graded PROM: PARTIAL peak 34.2% dip -26.5% plan STOP
+2026-11-24 06:36:26 graded AT: MISS peak 2.4% dip -2.3% plan OPEN
+2026-11-24 06:36:26 graded AIGENSYN: MISS peak 13.4% dip -1.8% plan OPEN
+2026-11-24 06:36:26 graded NIGHT: MISS peak 7.1% dip -2.1% plan OPEN
+2026-11-24 06:36:26 graded MARSCOIN: MISS peak 7.0% dip -7.1% plan OPEN
+2026-11-24 06:36:26 graded 1000RATS: MISS peak 9.9% dip -1.6% plan OPEN
+2026-11-24 06:36:26 graded BR: MISS peak 1.4% dip -4.0% plan OPEN
+2026-11-24 06:36:26 graded FLUID: MISS peak 11.1% dip -2.3% plan OPEN
+2026-11-24 06:36:26 graded FLUX: PARTIAL peak 17.4% dip -0.7% plan OPEN
+2026-11-24 06:36:26 graded C: MISS peak 4.7% dip -1.1% plan OPEN
+2026-11-24 06:36:26 graded ALLO: MISS peak 8.0% dip -3.7% plan OPEN
+2026-11-24 06:36:26 graded ETHW: MISS peak 7.1% dip -2.7% plan OPEN
+2026-11-24 06:36:26 graded RECALL: MISS peak 5.7% dip -3.4% plan OPEN
+2026-11-24 06:36:26 graded SPK: MISS peak 7.4% dip -3.6% plan OPEN
