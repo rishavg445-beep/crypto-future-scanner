@@ -195,3 +195,17 @@
 2026-11-25 02:58:26 graded ELSA: MISS peak 11.4% dip -1.1% plan OPEN
 2026-11-25 02:58:26 graded INX: PARTIAL peak 20.7% dip -3.7% plan OPEN
 2026-11-25 02:58:26 graded STBL: MISS peak 9.5% dip -2.8% plan OPEN
+2026-11-25 10:26:48 instruments: 505, sample ['B-C_USDT', 'B-4_USDT', 'B-ENSO_USDT']
+2026-11-25 10:26:48 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.753, 'l': 3.536, 'v': 55002847.9646, 'ls': 3.723, 'pc': 4.903, 'mkt': 'NATGASUSDT', 'btST': 1795582601254, 'ctRT': 1795582602495, 'skw': 44, 'mp': 3.723, 'efr': 0, 'bmST': 1795582607362, 'cmRT': 1795582607580}
+2026-11-25 10:31:25 coins with usable candles: 505 of 505
+2026-11-25 10:31:25 REAL PUMP EVAA +55% (picked first: False)
+2026-11-25 10:31:25 REAL PUMP BIGTIME +61% (picked first: False)
+2026-11-25 10:31:25 graded RVN: MISS peak 2.6% dip -3.1% plan OPEN
+2026-11-25 10:31:25 graded SAHARA: PARTIAL peak 19.3% dip 0.7% plan OPEN
+2026-11-25 10:31:25 graded BARD: MISS peak 0.6% dip -3.2% plan STOP
+2026-11-25 10:31:25 graded BREV: MISS peak 3.9% dip 0.3% plan OPEN
+2026-11-25 10:31:25 graded ONE: MISS peak -0.3% dip -4.5% plan OPEN
+2026-11-25 10:31:25 graded USUAL: MISS peak 6.5% dip -1.1% plan OPEN
+2026-11-25 10:31:25 graded WLFI: MISS peak -0.0% dip -3.4% plan OPEN
+2026-11-25 10:31:25 graded RARE: MISS peak -0.2% dip -1.6% plan OPEN
+2026-11-25 10:31:25 graded HUMA: MISS peak 5.8% dip -2.2% plan OPEN
