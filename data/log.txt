@@ -220,3 +220,11 @@
 2026-11-25 13:07:45 graded RE: MISS peak -0.6% dip -2.6% plan OPEN
 2026-11-25 13:07:45 graded ACU: MISS peak 0.3% dip -1.5% plan OPEN
 2026-11-25 13:07:45 graded BABY: MISS peak 4.3% dip -2.1% plan OPEN
+2026-11-25 21:19:41 instruments: 505, sample ['B-ZEREBRO_USDT', 'B-ARPA_USDT', 'B-GMT_USDT']
+2026-11-25 21:19:41 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.753, 'l': 3.591, 'v': 65808189.8885, 'ls': 3.686, 'pc': 0.218, 'mkt': 'NATGASUSDT', 'btST': 1795621777049, 'ctRT': 1795621777488, 'skw': 54, 'mp': 3.686, 'efr': 0, 'bmST': 1795621780361, 'cmRT': 1795621780682}
+2026-11-25 21:24:21 coins with usable candles: 505 of 505
+2026-11-25 21:24:21 REAL PUMP MANTRA +62% (picked first: False)
+2026-11-25 21:24:21 graded ONG: MISS peak 4.0% dip -1.8% plan OPEN
+2026-11-25 21:24:21 graded ASR: MISS peak 10.1% dip -1.7% plan OPEN
+2026-11-25 21:24:21 graded HMSTR: MISS peak 4.4% dip -3.9% plan OPEN
+2026-11-25 21:24:21 graded GLM: MISS peak 2.3% dip -1.1% plan OPEN
