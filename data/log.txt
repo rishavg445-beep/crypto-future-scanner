@@ -209,3 +209,14 @@
 2026-11-25 10:31:25 graded WLFI: MISS peak -0.0% dip -3.4% plan OPEN
 2026-11-25 10:31:25 graded RARE: MISS peak -0.2% dip -1.6% plan OPEN
 2026-11-25 10:31:25 graded HUMA: MISS peak 5.8% dip -2.2% plan OPEN
+2026-11-25 13:02:46 instruments: 505, sample ['B-HAEDAL_USDT', 'B-ASR_USDT', 'B-AWE_USDT']
+2026-11-25 13:02:46 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.753, 'l': 3.568, 'v': 58362538.3582, 'ls': 3.635, 'pc': 1.423, 'mkt': 'NATGASUSDT', 'btST': 1795591965064, 'ctRT': 1795591965499, 'skw': 11, 'mp': 3.6358839, 'efr': 0, 'bmST': 1795591965362, 'cmRT': 1795591965622}
+2026-11-25 13:07:45 coins with usable candles: 505 of 505
+2026-11-25 13:07:45 graded ON: MISS peak 13.2% dip 0.7% plan OPEN
+2026-11-25 13:07:45 graded RPL: MISS peak 3.8% dip -3.7% plan OPEN
+2026-11-25 13:07:45 graded SQD: MISS peak 1.5% dip -3.3% plan OPEN
+2026-11-25 13:07:45 graded BIGTIME: HIT peak 76.1% dip -3.1% plan T1
+2026-11-25 13:07:45 graded 0G: MISS peak 0.5% dip -1.9% plan STOP
+2026-11-25 13:07:45 graded RE: MISS peak -0.6% dip -2.6% plan OPEN
+2026-11-25 13:07:45 graded ACU: MISS peak 0.3% dip -1.5% plan OPEN
+2026-11-25 13:07:45 graded BABY: MISS peak 4.3% dip -2.1% plan OPEN
