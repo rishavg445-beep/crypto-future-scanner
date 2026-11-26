@@ -242,3 +242,18 @@
 2026-11-26 06:07:14 graded STABLE: MISS peak 1.3% dip -5.6% plan OPEN
 2026-11-26 06:07:14 graded SONIC: MISS peak 9.4% dip -2.4% plan OPEN
 2026-11-26 06:07:14 graded SOLV: MISS peak 1.1% dip -0.2% plan STOP
+2026-11-26 15:10:37 instruments: 505, sample ['B-BMT_USDT', 'B-ALPINE_USDT', 'B-SKYAI_USDT']
+2026-11-26 15:10:37 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.732, 'l': 3.589, 'v': 55615079.8019, 'ls': 3.632, 'pc': -0.137, 'mkt': 'NATGASUSDT', 'btST': 1795686030104, 'ctRT': 1795686030509, 'skw': -3, 'mp': 3.63268955, 'efr': 0, 'bmST': 1795686035362, 'cmRT': 1795686035592}
+2026-11-26 15:14:31 coins with usable candles: 505 of 505
+2026-11-26 15:14:31 REAL PUMP ELSA +68% (picked first: False)
+2026-11-26 15:14:31 graded SLX: MISS peak 13.3% dip -7.5% plan OPEN
+2026-11-26 15:14:31 graded ANIME: MISS peak 5.2% dip -5.1% plan OPEN
+2026-11-26 15:14:31 graded GOAT: MISS peak 5.7% dip -1.2% plan OPEN
+2026-11-26 15:14:31 graded WAXP: MISS peak 10.3% dip -1.0% plan OPEN
+2026-11-26 15:14:31 graded MANTA: MISS peak 14.1% dip -2.2% plan OPEN
+2026-11-26 15:14:31 graded STBL: MISS peak 8.4% dip -1.8% plan OPEN
+2026-11-26 15:14:31 graded MANTRA: HIT peak 98.1% dip 0.3% plan T1
+2026-11-26 15:14:31 graded CHILLGUY: MISS peak 5.6% dip -3.3% plan OPEN
+2026-11-26 15:14:31 graded MOODENG: PARTIAL peak 25.6% dip 0.8% plan OPEN
+2026-11-26 15:14:31 graded ALICE: MISS peak 3.3% dip -2.1% plan OPEN
+2026-11-26 15:14:31 graded CKB: MISS peak 11.7% dip -2.2% plan OPEN
