@@ -228,3 +228,17 @@
 2026-11-25 21:24:21 graded ASR: MISS peak 10.1% dip -1.7% plan OPEN
 2026-11-25 21:24:21 graded HMSTR: MISS peak 4.4% dip -3.9% plan OPEN
 2026-11-25 21:24:21 graded GLM: MISS peak 2.3% dip -1.1% plan OPEN
+2026-11-26 06:03:03 instruments: 505, sample ['B-PEOPLE_USDT', 'B-ROSE_USDT', 'B-JELLYJELLY_USDT']
+2026-11-26 06:03:03 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.736, 'l': 3.591, 'v': 59672365.3219, 'ls': 3.692, 'pc': 0.19, 'mkt': 'NATGASUSDT', 'btST': 1795653171000, 'ctRT': 1795653171528, 'skw': 35, 'mp': 3.692, 'efr': 0, 'bmST': 1795653182361, 'cmRT': 1795653182606}
+2026-11-26 06:07:14 coins with usable candles: 505 of 505
+2026-11-26 06:07:14 REAL PUMP MMT +53% (picked first: False)
+2026-11-26 06:07:14 REAL PUMP BULLA +52% (picked first: False)
+2026-11-26 06:07:14 REAL PUMP SSV +56% (picked first: False)
+2026-11-26 06:07:14 REAL PUMP MOVE +52% (picked first: False)
+2026-11-26 06:07:14 graded OPG: MISS peak 14.0% dip -0.5% plan OPEN
+2026-11-26 06:07:14 graded ZEREBRO: MISS peak 0.5% dip -0.6% plan STOP
+2026-11-26 06:07:14 graded AT: PARTIAL peak 23.2% dip -10.5% plan OPEN
+2026-11-26 06:07:14 graded MON: PARTIAL peak 28.2% dip -1.4% plan OPEN
+2026-11-26 06:07:14 graded STABLE: MISS peak 1.3% dip -5.6% plan OPEN
+2026-11-26 06:07:14 graded SONIC: MISS peak 9.4% dip -2.4% plan OPEN
+2026-11-26 06:07:14 graded SOLV: MISS peak 1.1% dip -0.2% plan STOP
