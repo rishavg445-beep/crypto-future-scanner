@@ -1,13 +1,3 @@
-2026-11-21 18:02:53 graded ANIME: MISS peak 1.0% dip -1.1% plan STOP
-2026-11-21 18:02:53 graded BARD: MISS peak 1.7% dip -3.9% plan OPEN
-2026-11-21 18:02:53 graded BANK: MISS peak 0.6% dip -0.5% plan STOP
-2026-11-21 18:02:53 graded GTC: MISS peak -0.5% dip -3.9% plan STOP
-2026-11-21 18:02:53 graded IRYS: PARTIAL peak 15.3% dip -0.5% plan OPEN
-2026-11-21 18:02:53 graded BMT: MISS peak 5.4% dip -3.0% plan STOP
-2026-11-22 01:31:49 instruments: 505, sample ['B-AIOT_USDT', 'B-LIT_USDT', 'B-SKR_USDT']
-2026-11-22 01:31:50 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.805, 'l': 3.751, 'v': 18454398.7321, 'ls': 3.796, 'pc': 1.092, 'mkt': 'NATGASUSDT', 'btST': 1795291308847, 'ctRT': 1795291309487, 'skw': -216, 'mp': 3.7956182, 'efr': 0, 'bmST': 1795291309685, 'cmRT': 1795291309788}
-2026-11-22 01:36:30 coins with usable candles: 505 of 505
-2026-11-22 01:36:30 REAL MOVER IDOL +64.4% (we had picked it: False)
 2026-11-22 01:36:30 graded CARV: MISS peak 8.9% dip -0.7% plan OPEN
 2026-11-22 01:36:30 graded CYBER: MISS peak 3.3% dip -4.6% plan STOP
 2026-11-22 01:36:30 graded ENSO: PARTIAL peak 25.4% dip -3.0% plan T1
@@ -258,3 +248,14 @@
 2026-11-27 08:32:29 graded STO: MISS peak 9.9% dip -0.4% plan OPEN
 2026-11-27 08:32:29 graded AT: MISS peak 3.2% dip -2.9% plan OPEN
 2026-11-27 08:32:29 graded AKE: PARTIAL peak 17.1% dip -21.2% plan STOP
+2026-11-27 18:19:55 instruments: 505, sample ['B-SXT_USDT', 'B-OPEN_USDT', 'B-PROM_USDT']
+2026-11-27 18:19:56 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.643, 'l': 3.52, 'v': 20413210.9043, 'ls': 3.521, 'pc': -2.627, 'mkt': 'NATGASUSDT', 'btST': 1795783795040, 'ctRT': 1795783795484, 'skw': 47, 'mp': 3.5204746, 'efr': 0, 'bmST': 1795783795362, 'cmRT': 1795783795574}
+2026-11-27 18:24:28 coins with usable candles: 505 of 505
+2026-11-27 18:24:28 REAL PUMP PORTAL +108% (picked first: False)
+2026-11-27 18:24:28 REAL PUMP HAEDAL +63% (picked first: False)
+2026-11-27 18:24:28 graded B2: MISS peak 4.7% dip -0.3% plan OPEN
+2026-11-27 18:24:28 graded B: MISS peak 4.8% dip -4.4% plan OPEN
+2026-11-27 18:24:28 graded BABY: MISS peak 5.3% dip -2.6% plan OPEN
+2026-11-27 18:24:28 graded MOODENG: MISS peak 7.9% dip -1.3% plan OPEN
+2026-11-27 18:24:28 graded HMSTR: MISS peak 2.8% dip -1.7% plan OPEN
+2026-11-27 18:24:28 graded PLAY: MISS peak 0.5% dip -2.6% plan OPEN
