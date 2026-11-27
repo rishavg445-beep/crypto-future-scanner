@@ -1,14 +1,3 @@
-2026-11-22 01:36:30 graded CARV: MISS peak 8.9% dip -0.7% plan OPEN
-2026-11-22 01:36:30 graded CYBER: MISS peak 3.3% dip -4.6% plan STOP
-2026-11-22 01:36:30 graded ENSO: PARTIAL peak 25.4% dip -3.0% plan T1
-2026-11-22 01:36:30 graded TREE: MISS peak 3.5% dip -0.7% plan OPEN
-2026-11-22 01:36:30 graded ELSA: MISS peak 9.4% dip -3.2% plan OPEN
-2026-11-22 01:36:30 graded MANTRA: MISS peak 3.4% dip -5.3% plan OPEN
-2026-11-22 01:36:30 graded GWEI: MISS peak -0.6% dip -3.5% plan STOP
-2026-11-22 01:36:30 graded BAN: MISS peak 12.9% dip 2.5% plan OPEN
-2026-11-22 01:36:30 graded PROM: MISS peak -2.3% dip -15.0% plan STOP
-2026-11-22 01:36:30 graded LISTA: MISS peak 1.8% dip 0.2% plan STOP
-2026-11-22 05:47:10 instruments: 505, sample ['B-1000PEPE_USDT', 'B-PHAROS_USDT', 'B-ONG_USDT']
 2026-11-22 05:47:10 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.801, 'l': 3.751, 'v': 10179906.2685, 'ls': 3.79, 'pc': 0.159, 'mkt': 'NATGASUSDT', 'btST': 1795306629769, 'ctRT': 1795306630497, 'skw': 49, 'mp': 3.791, 'efr': 0, 'bmST': 1795306629686, 'cmRT': 1795306629801}
 2026-11-22 05:51:41 coins with usable candles: 505 of 505
 2026-11-22 05:51:41 graded HOT: MISS peak 2.2% dip -8.2% plan OPEN
@@ -259,3 +248,14 @@
 2026-11-27 18:24:28 graded MOODENG: MISS peak 7.9% dip -1.3% plan OPEN
 2026-11-27 18:24:28 graded HMSTR: MISS peak 2.8% dip -1.7% plan OPEN
 2026-11-27 18:24:28 graded PLAY: MISS peak 0.5% dip -2.6% plan OPEN
+2026-11-28 03:39:15 instruments: 505, sample ['B-WAL_USDT', 'B-ETC_USDT', 'B-LINK_USDT']
+2026-11-28 03:39:16 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.643, 'l': 3.459, 'v': 38871026.7598, 'ls': 3.487, 'pc': -3.166, 'mkt': 'NATGASUSDT', 'btST': 1795817342378, 'ctRT': 1795817343484, 'skw': -1, 'mp': 3.48656939, 'efr': 0, 'bmST': 1795817355362, 'cmRT': 1795817355568}
+2026-11-28 03:43:59 coins with usable candles: 505 of 505
+2026-11-28 03:43:59 REAL PUMP THE +66% (picked first: False)
+2026-11-28 03:43:59 graded BULLA: HIT peak 161.6% dip -8.0% plan OPEN
+2026-11-28 03:43:59 graded RIF: PARTIAL peak 19.9% dip -3.5% plan OPEN
+2026-11-28 03:43:59 graded JOE: MISS peak 5.0% dip -0.9% plan OPEN
+2026-11-28 03:43:59 graded WIF: MISS peak 0.9% dip -4.0% plan OPEN
+2026-11-28 03:43:59 graded XMR: MISS peak 8.0% dip -2.1% plan OPEN
+2026-11-28 03:43:59 graded GWEI: MISS peak 0.2% dip -4.1% plan OPEN
+2026-11-28 03:43:59 graded MOVE: MISS peak 5.1% dip -0.1% plan OPEN
