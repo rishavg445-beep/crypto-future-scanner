@@ -1,14 +1,3 @@
-2026-11-22 05:47:10 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.801, 'l': 3.751, 'v': 10179906.2685, 'ls': 3.79, 'pc': 0.159, 'mkt': 'NATGASUSDT', 'btST': 1795306629769, 'ctRT': 1795306630497, 'skw': 49, 'mp': 3.791, 'efr': 0, 'bmST': 1795306629686, 'cmRT': 1795306629801}
-2026-11-22 05:51:41 coins with usable candles: 505 of 505
-2026-11-22 05:51:41 graded HOT: MISS peak 2.2% dip -8.2% plan OPEN
-2026-11-22 05:51:41 graded KERNEL: MISS peak 7.3% dip -5.0% plan OPEN
-2026-11-22 05:51:41 graded HMSTR: MISS peak 0.7% dip -5.5% plan OPEN
-2026-11-22 05:51:41 graded SUSHI: MISS peak 2.1% dip -0.3% plan STOP
-2026-11-22 05:51:41 graded BLUR: MISS peak 1.8% dip -2.3% plan OPEN
-2026-11-22 05:51:41 graded TNSR: MISS peak 2.8% dip -6.3% plan OPEN
-2026-11-22 05:51:41 graded RARE: PARTIAL peak 21.0% dip -2.6% plan OPEN
-2026-11-22 05:51:41 graded TWT: MISS peak 5.8% dip -7.5% plan STOP
-2026-11-22 13:26:08 instruments: 505, sample ['B-DEEP_USDT', 'B-ETH_USDT', 'B-BCH_USDT']
 2026-11-22 13:26:08 price sample B-NATGAS_USDT: {'fr': -5.376e-05, 'h': 3.801, 'l': 3.751, 'v': 9479727.1349, 'ls': 3.768, 'pc': 0.106, 'mkt': 'NATGASUSDT', 'btST': 1795334158059, 'ctRT': 1795334158471, 'skw': 21, 'mp': 3.768, 'efr': 0, 'bmST': 1795334167686, 'cmRT': 1795334167812}
 2026-11-22 13:30:52 coins with usable candles: 505 of 505
 2026-11-22 13:30:52 REAL MOVER SKYAI +57.9% (we had picked it: True)
@@ -259,3 +248,15 @@
 2026-11-28 03:43:59 graded XMR: MISS peak 8.0% dip -2.1% plan OPEN
 2026-11-28 03:43:59 graded GWEI: MISS peak 0.2% dip -4.1% plan OPEN
 2026-11-28 03:43:59 graded MOVE: MISS peak 5.1% dip -0.1% plan OPEN
+2026-11-28 09:31:41 instruments: 505, sample ['B-F_USDT', 'B-LINK_USDT', 'B-PUMP_USDT']
+2026-11-28 09:31:43 price sample B-NATGAS_USDT: {'fr': 0, 'h': 3.643, 'l': 3.459, 'v': 36898258.2894, 'ls': 3.504, 'pc': -3.044, 'mkt': 'NATGASUSDT', 'btST': 1795838491695, 'ctRT': 1795838492484, 'skw': 46, 'mp': 3.50352321, 'efr': 0, 'bmST': 1795838501361, 'cmRT': 1795838501675}
+2026-11-28 09:36:23 coins with usable candles: 505 of 505
+2026-11-28 09:36:23 graded ME: MISS peak 0.4% dip -2.0% plan OPEN
+2026-11-28 09:36:23 graded GRVT: MISS peak 7.3% dip -3.1% plan OPEN
+2026-11-28 09:36:23 graded MOCA: MISS peak 0.2% dip -2.0% plan OPEN
+2026-11-28 09:36:23 graded SAFE: MISS peak 2.4% dip -2.4% plan OPEN
+2026-11-28 09:36:23 graded HYPER: MISS peak 4.0% dip -2.3% plan OPEN
+2026-11-28 09:36:23 graded ONE: MISS peak 3.5% dip -3.5% plan OPEN
+2026-11-28 09:36:23 graded SLX: MISS peak 7.7% dip -2.9% plan OPEN
+2026-11-28 09:36:23 graded BIGTIME: MISS peak 1.7% dip -6.6% plan OPEN
+2026-11-28 09:36:23 graded COPPER: MISS peak 1.5% dip -0.8% plan OPEN
